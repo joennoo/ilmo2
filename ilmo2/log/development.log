@@ -218,3 +218,35 @@ Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:52:26) [GET]
 Rendering template within layouts/application
 Rendering courses/show
 Completed in 19ms (View: 4, DB: 6) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:59:51) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 19ms (View: 7, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:59:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 18ms (View: 4, DB: 6) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:59:59) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 20ms (View: 4, DB: 5) | 200 OK [http://localhost/courses/show/8]
