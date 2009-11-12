@@ -1,0 +1,177 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:35:09) [GET]
+Rendering courses/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/courses/index.html.erb:
+1: <h2>Courses</h2>
+2: <ul>
+3:   <% @courses.each do |course| %>
+4: 	<li><%= link_to course.name,
+5:               :controller=> "courses",
+6:               :action=> "show",
+
+    app/views/courses/index.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (131.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:36:47) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 97ms (View: 84, DB: 5) | 200 OK [http://localhost/courses/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:37:20) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 23ms (View: 11, DB: 4) | 200 OK [http://localhost/courses/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:37:22) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:38:43) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 24ms (View: 9, DB: 5) | 200 OK [http://localhost/courses/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:38:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering courses/show
+
+ActionView::TemplateError (undefined local variable or method `index_url' for #<ActionView::Base:0x438dd2c>) on line #3 of app/views/courses/show.html.erb:
+1: <h2><%= @course.name %> </h2>
+2: 
+3: <%= link_to "Back", index_url %>
+4: 
+5: <p><%= @course.description %></p>
+
+    app/views/courses/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:41:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering courses/show
+Completed in 65ms (View: 50, DB: 4) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:42:45) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 24ms (View: 11, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:42:47) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 18ms (View: 6, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:42:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (4.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering courses/show
+Completed in 29ms (View: 3, DB: 16) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:42:53) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 17ms (View: 6, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:42:55) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mCourse Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (7.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 7) [0m
+Rendering courses/show
+Completed in 29ms (View: 5, DB: 14) | 200 OK [http://localhost/courses/show/7]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:42:56) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 18ms (View: 6, DB: 7) | 200 OK [http://localhost/]
