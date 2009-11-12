@@ -175,3 +175,46 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:42:56) [GET]
 Rendering courses/index
   [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
 Completed in 18ms (View: 6, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-12 18:51:55) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 100ms (View: 26, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:52:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 20ms (View: 5, DB: 4) | 200 OK [http://localhost/courses/show/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:52:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 16ms (View: 4, DB: 4) | 200 OK [http://localhost/courses/show/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-12 18:52:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 19ms (View: 4, DB: 6) | 200 OK [http://localhost/courses/show/1]
