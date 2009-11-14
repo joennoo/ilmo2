@@ -1,3 +1,16 @@
+<h2>Login</h2>
+<% form_for @user do |f| %>
+   <%= f.label :username, 'Username' %>:
+   <%= f.text_field :username %><br />
+   <%= f.label :password, 'Password' %>:
+   <%= f.password_field :password %><br />
+
+   <%= submit_tag "OK" %> 
+<% end %>
+
+Register
+
+
 <h2>Courses</h2>
 <ul>
   <% @courses.each do |course| %>

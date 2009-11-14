@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   def index
+    @user = User.new
     @courses = Course.find(:all)
   end
 
