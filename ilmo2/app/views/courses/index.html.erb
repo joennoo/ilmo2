@@ -1,8 +1,9 @@
 
-<% if session[:authorized] %>
+<% if logged_in? %>
 
-  Hi! You have logged in (<%= link_to "Logout", "/sessions/logout",
-                                        :method => :delete %>)
+  Wellcome, <%= current_user.username  %>! (<%= link_to "Logout",
+                                                "/sessions/logout",
+                                                :method => :delete %>)
   <h2>Courses</h2>
   <ul>
   <% @courses.each do |course| %>

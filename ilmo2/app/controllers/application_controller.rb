@@ -8,10 +8,14 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
+  include Authentication
+  
   before_filter :authorize
+
+  protected
   
   def authorize
-    if session[:authorized]
+    if logged_in?
       return true
     else
       redirect_to root_url
