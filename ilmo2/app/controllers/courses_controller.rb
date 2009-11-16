@@ -1,4 +1,7 @@
 class CoursesController < ApplicationController
+
+  skip_before_filter :authorize, :only => :index
+
   def index
     @user = User.new
     @courses = Course.find(:all)
