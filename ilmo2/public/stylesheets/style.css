@@ -2,9 +2,11 @@ body {
     background-color:#f0f1f2
 }
 
-.account_created {
+.account_created, .account_updated{
     color: green
 }
+
+
 
 .login_failed {
     color:red
