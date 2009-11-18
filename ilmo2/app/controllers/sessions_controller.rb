@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
                                           params[:user][:password])
     if user
       session[:user_id] = user.id
+    else
+      flash[:error] = "Login failed. Try again."
     end
     
     redirect_to root_url

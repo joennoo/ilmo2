@@ -2,4 +2,20 @@ body {
     background-color:#f0f1f2
 }
 
+.account_created {
+    color: green
+}
+
+.login_failed {
+    color:red
+}
+
+.fieldWithErrors input {
+    border: 1px solid red
+}
+
+.errorExplanation {
+    color: red
+}
+
 

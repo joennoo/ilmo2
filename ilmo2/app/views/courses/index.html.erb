@@ -1,7 +1,7 @@
 
 <% if logged_in? %>
 
-  Wellcome, <%= current_user.username  %>! (<%= link_to "Logout",
+  Welcome, <%= current_user.username  %>! (<%= link_to "Logout",
                                                 "/sessions/logout",
                                                 :method => :delete %>)
   <h2>Courses</h2>
@@ -18,6 +18,15 @@
 <% else %>
 
   <h2>Login</h2>
+
+  <div class="account_created" >
+    <%= flash[:notice] %>
+  </div>
+  <div class="login_failed" >
+    <%= flash[:error] %>
+  </div>
+  <br/>
+
   <% form_for @user, :url => sessions_url do |f| %>
      <%= f.label :username, 'Username' %>:
      <%= f.text_field :username %><br />
@@ -27,7 +36,7 @@
      <%= submit_tag "OK" %>
   <% end %>
 
-  Register
+  <%= link_to "Register", new_user_url %>
 
 <% end %>
 
