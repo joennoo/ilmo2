@@ -1,0 +1,10 @@
+<h2>Welcome new user</h2>
+
+<%= error_messages_for "user" %>
+
+<% form_for @user do |f| %>
+   Username <%= f.text_field :username %><br />
+   Password <%= f.password_field :password %><br />
+   Confirm password <%= f.password_field :password_confirmation %><br />
+   <%= submit_tag "OK" %>
+<% end %>

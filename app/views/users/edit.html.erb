@@ -1,0 +1,27 @@
+<h2>Edit user</h2>
+
+<%= error_messages_for "user" %>
+
+<% form_for @user do |f| %>
+<fieldset>
+  <legend>User information</legend>
+  <p>Username <%= f.text_field :username %></p>
+  <p>Real name <%= f.text_field :realname %></p>
+  <p>Student id <%= f.text_field :studentid %></p>
+</fieldset>
+<fieldset>
+  <legend>Change password</legend>
+  <p>New password <%= f.password_field :password,{ :value => '' } %></p>
+  <p>Confirm new password <%= f.password_field :password_confirmation,
+                                          { :value => '' } %></p>
+</fieldset>
+
+<%= submit_tag "Update" %>
+
+<% end %>
+
+<%= link_to 'Delete account', @user,
+        :confirm => 'Are you sure? This will remove your account permanently.',
+        :method => :delete %>
+
+
