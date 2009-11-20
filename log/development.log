@@ -9100,3 +9100,1115 @@ Processing CoursesController#index (for 127.0.0.1 at 2009-11-19 14:56:57) [GET]
 Rendering template within layouts/application
 Rendering courses/index
 Completed in 26ms (View: 8, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (158.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 21:51:46) [GET]
+  [4;36;1mUser Columns (207.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (129.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 771ms (View: 413, DB: 494) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (213.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (443.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091112162227)
+Migrating to CreateUsers (20091114202141)
+Migrating to AddRealNameAndStudentIdToUsers (20091118173934)
+Migrating to CourseInstances (20091120200251)
+  [4;36;1mSQL (359.0ms)[0m   [0;1mCREATE TABLE `course_instances` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `course_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091120200251')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `course_instances`[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mSHOW KEYS FROM `course_instances`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Load (10.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mCourse Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` [0m
+  [4;35;1mCourseInstance Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO `course_instances` (`name`, `updated_at`, `course_id`, `created_at`) VALUES('Syksy 2009', '2009-11-20 20:50:10', NULL, '2009-11-20 20:50:10')[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCourse Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (28.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCourseInstance Create (1.0ms)[0m   [0mINSERT INTO `course_instances` (`name`, `updated_at`, `course_id`, `created_at`) VALUES('Syksy 2010', '2009-11-20 20:51:55', NULL, '2009-11-20 20:51:55')[0m
+  [4;36;1mSQL (56.0ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:52:10) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #33 of app/views/courses/index.html.erb:
+30:   </div>
+31:   <br/>
+32: 
+33:   <% form_for @user, :url => sessions_url do |f| %>
+34:      <%= f.label :username, 'Username' %>:
+35:      <%= f.text_field :username %><br />
+36:      <%= f.label :password, 'Password' %>:
+
+    app/views/courses/index.html.erb:33
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:53:31) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #33 of app/views/courses/index.html.erb:
+30:   </div>
+31:   <br/>
+32: 
+33:   <% form_for @user, :url => sessions_url do |f| %>
+34:      <%= f.label :username, 'Username' %>:
+35:      <%= f.text_field :username %><br />
+36:      <%= f.label :password, 'Password' %>:
+
+    app/views/courses/index.html.erb:33
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:53:39) [GET]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #33 of app/views/courses/index.html.erb:
+30:   </div>
+31:   <br/>
+32: 
+33:   <% form_for @user, :url => sessions_url do |f| %>
+34:      <%= f.label :username, 'Username' %>:
+35:      <%= f.text_field :username %><br />
+36:      <%= f.label :password, 'Password' %>:
+
+    app/views/courses/index.html.erb:33
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:53:55) [GET]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #33 of app/views/courses/index.html.erb:
+30:   </div>
+31:   <br/>
+32: 
+33:   <% form_for @user, :url => sessions_url do |f| %>
+34:      <%= f.label :username, 'Username' %>:
+35:      <%= f.text_field :username %><br />
+36:      <%= f.label :password, 'Password' %>:
+
+    app/views/courses/index.html.erb:33
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:55:53) [GET]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #33 of app/views/courses/index.html.erb:
+30:   </div>
+31:   <br/>
+32: 
+33:   <% form_for @user, :url => sessions_url do |f| %>
+34:      <%= f.label :username, 'Username' %>:
+35:      <%= f.text_field :username %><br />
+36:      <%= f.label :password, 'Password' %>:
+
+    app/views/courses/index.html.erb:33
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:56:30) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 68ms (View: 48, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-20 22:56:37) [POST]
+  Parameters: {"user"=>{"username"=>"testi1", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"rLda+fUXLGmqil2tYoDu5hxxOffSVsdr/CW/BgfwOC8="}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (13.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi1' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 17) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:56:38) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 29ms (View: 9, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-20 22:56:44) [POST]
+  Parameters: {"user"=>{"username"=>"testi2", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"rLda+fUXLGmqil2tYoDu5hxxOffSVsdr/CW/BgfwOC8="}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi2' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 5) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:56:44) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 34ms (View: 8, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-20 22:56:46) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 112ms (View: 21, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-20 22:56:54) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"testi", "username"=>"testi1", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"rLda+fUXLGmqil2tYoDu5hxxOffSVsdr/CW/BgfwOC8="}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (41.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'testi1') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`studentid`, `updated_at`, `username`, `password`, `realname`, `created_at`) VALUES(NULL, '2009-11-20 20:56:54', 'testi1', 'testi', NULL, '2009-11-20 20:56:54')[0m
+  [4;36;1mSQL (51.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 112ms (DB: 96) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:56:55) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 29ms (View: 9, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-11-20 22:57:04) [POST]
+  Parameters: {"user"=>{"username"=>"testi1", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"rLda+fUXLGmqil2tYoDu5hxxOffSVsdr/CW/BgfwOC8="}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi1' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 22:57:05) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 55ms (View: 16, DB: 25) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 22:57:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 39ms (View: 24, DB: 5) | 200 OK [http://localhost/courses/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 22:57:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 25ms (View: 11, DB: 4) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 22:58:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 32ms (View: 17, DB: 5) | 200 OK [http://localhost/courses/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:00:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 29ms (View: 13, DB: 5) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:01:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 33ms (View: 18, DB: 5) | 200 OK [http://localhost/courses/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:02:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 27ms (View: 11, DB: 6) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:02:04) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 40ms (View: 14, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:02:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 2) [0m
+Completed in 29ms (View: 13, DB: 5) | 200 OK [http://localhost/courses/show/2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:02:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+Completed in 27ms (View: 11, DB: 6) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCourseInstance Destroy (74.0ms)[0m   [0;1mDELETE FROM `course_instances` WHERE `id` = 1[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCourseInstance Destroy (0.0ms)[0m   [0;1mDELETE FROM `course_instances` WHERE `id` = 2[0m
+  [4;35;1mSQL (55.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCourseInstance Create (0.0ms)[0m   [0;1mINSERT INTO `course_instances` (`name`, `updated_at`, `course_id`, `created_at`) VALUES('Syksy 2009', '2009-11-20 21:03:55', 1, '2009-11-20 21:03:55')[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCourseInstance Create (1.0ms)[0m   [0;1mINSERT INTO `course_instances` (`name`, `updated_at`, `course_id`, `created_at`) VALUES('Syksy 2010', '2009-11-20 21:04:10', 1, '2009-11-20 21:04:10')[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:04:41) [GET]
+  [4;35;1mUser Columns (30.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 68ms (View: 15, DB: 36) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 37ms (View: 17, DB: 10) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:05:04) [GET]
+  Parameters: {"id"=>"3"}
+
+ActionController::UnknownAction (No action responded to show. Actions: ):
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:08:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 3) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 41ms (View: 16, DB: 9) | 200 OK [http://localhost/course_instances/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:10:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find CourseInstance without an ID):
+  app/controllers/course_instances_controller.rb:5:in `show'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:10:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find CourseInstance without an ID):
+  app/controllers/course_instances_controller.rb:5:in `show'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:10:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 37ms (View: 17, DB: 9) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:10:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find CourseInstance without an ID):
+  app/controllers/course_instances_controller.rb:5:in `show'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:12:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 35ms (View: 17, DB: 9) | 200 OK [http://localhost/courses/show/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:12:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+
+ActionView::TemplateError (undefined method `name' for 1:Fixnum) on line #1 of app/views/course_instances/show.html.erb:
+1: <h2><%= @course.name %></h2>
+2: 
+3: <%= @course_ins.name %><br/>
+4: 
+
+    app/views/course_instances/show.html.erb:1
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:13:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 109ms (View: 4, DB: 9) | 200 OK [http://localhost/course_instances/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:13:17) [GET]
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 43ms (View: 14, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:13:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Completed in 34ms (View: 15, DB: 10) | 200 OK [http://localhost/courses/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:16:09) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 37ms (View: 15, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:16:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 33ms (View: 15, DB: 10) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:16:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 31ms (View: 4, DB: 7) | 200 OK [http://localhost/course_instances/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:16:20) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 37ms (View: 15, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:16:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 34ms (View: 16, DB: 7) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:16:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 2) [0m
+Completed in 26ms (View: 11, DB: 7) | 200 OK [http://localhost/courses/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:16:25) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 37ms (View: 14, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-20 23:16:27) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 35ms (View: 21, DB: 3) | 200 OK [http://localhost/users/10/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-20 23:16:34) [PUT]
+  Parameters: {"user"=>{"studentid"=>"", "password_confirmation"=>"", "username"=>"testi1", "password"=>"", "realname"=>"testi ukko"}, "commit"=>"Update", "authenticity_token"=>"rLda+fUXLGmqil2tYoDu5hxxOffSVsdr/CW/BgfwOC8=", "id"=>"10"}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'testi1' AND `users`.id <> 10) LIMIT 1[0m
+  [4;36;1mUser Update (17.0ms)[0m   [0;1mUPDATE `users` SET `realname` = 'testi ukko', `password` = '', `updated_at` = '2009-11-20 21:16:34' WHERE `id` = 10[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 80ms (DB: 63) | 302 Found [http://localhost/users/10]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:16:35) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 38ms (View: 15, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:17:11) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 190ms (View: 132, DB: 9) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:17:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Completed in 44ms (View: 26, DB: 9) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:17:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Completed in 33ms (View: 15, DB: 7) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:17:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 44ms (View: 17, DB: 7) | 200 OK [http://localhost/course_instances/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:17:52) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 38ms (View: 15, DB: 7) | 200 OK [http://localhost/courses]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:18:21) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 37ms (View: 13, DB: 9) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:18:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 32ms (View: 15, DB: 9) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:18:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 37ms (View: 11, DB: 8) | 200 OK [http://localhost/course_instances/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:18:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 3) [0m
+Completed in 25ms (View: 11, DB: 5) | 200 OK [http://localhost/courses/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 3) [0m
+Completed in 25ms (View: 11, DB: 3) | 200 OK [http://localhost/courses/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:20:32) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 39ms (View: 14, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 53ms (View: 35, DB: 8) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:20:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 37ms (View: 10, DB: 9) | 200 OK [http://localhost/course_instances/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Completed in 32ms (View: 15, DB: 8) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:20:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 32ms (View: 5, DB: 9) | 200 OK [http://localhost/course_instances/4]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 33ms (View: 16, DB: 8) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:20:51) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 113ms (View: 14, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCourse Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 3) [0m
+Completed in 27ms (View: 11, DB: 8) | 200 OK [http://localhost/courses/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-11-20 23:20:54) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 39ms (View: 14, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Completed in 35ms (View: 15, DB: 8) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-11-20 23:20:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+Completed in 32ms (View: 4, DB: 10) | 200 OK [http://localhost/course_instances/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-11-20 23:20:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Completed in 33ms (View: 14, DB: 10) | 200 OK [http://localhost/courses/1]
