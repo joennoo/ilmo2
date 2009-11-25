@@ -1,7 +1,16 @@
-<h2><%= @course.name %></h2>
+<h2><%= @course_ins.course.name %></h2>
 
 <%= @course_ins.name %><br/>
 
 <%= link_to "Back", :controller=> "courses",
                 :action=> "show",
-                :id => @course  %>
+                :id => @course_ins.course_id  %><br/>
+
+<ul>
+  <% @course_ins.exercise_groups.each do |ex_group| %>
+  <li>
+    <%= link_to ex_group.name,
+        course_course_instance_exercise_group_url(ex_group.course_instance.course, ex_group.course_instance, ex_group) %>
+  </li>
+  <% end %>
+</ul>

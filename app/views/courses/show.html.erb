@@ -4,11 +4,13 @@
 
 <p><%= @course.description %></p>
 
-  <ul>
+<ul>
   <% @course.course_instances.each do |course_ins| %>
-    <li><%= link_to course_ins.name, course_instance_url(course_ins) %>
-    </li>
+  <li>
+    <%= link_to course_ins.name,
+        course_course_instance_url(course_ins.course, course_ins) %>
+  </li>
   <% end %>
-  </ul>
+</ul>
 
 

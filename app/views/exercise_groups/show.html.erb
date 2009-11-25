@@ -1,0 +1,9 @@
+<h2><%= @ex_group.course_instance.course.name %></h2>
+
+<h3><%= @ex_group.course_instance.name %></h3>
+
+<h4><%= @ex_group.name %></h4>
+
+<%= link_to "Back",
+    course_course_instance_url(@ex_group.course_instance.course,
+                               @ex_group.course_instance) %><br/>

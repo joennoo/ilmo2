@@ -39,10 +39,19 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
   map.resources :users
+
+  map.resources :courses do |course|
+    course.resources :course_instances do |course_ins|
+      course_ins.resources :exercise_groups
+    end
+  end
+
   map.logout "/sessions/logout", :controller => "sessions", :action => "destroy"
   map.resources :sessions
-  map.resources :courses
-  map.resources :course_instances
+
+  map.namespace(:admin) do |admin|
+    admin.resources :users
+  end
 
   map.root :controller => :courses, :action => :index
 

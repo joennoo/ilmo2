@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new params[:user]
     if @user.save
-      flash[:notice] = "Account created"
+      flash[:notice] = "Account #{@user.username} created"
       redirect_to root_url
     else
       render :action => :new
