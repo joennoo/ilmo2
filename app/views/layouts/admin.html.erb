@@ -1,6 +1,17 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
+<html>
+  <head>
+    <title>IlmoAdmin 2.0</title>
+    <%= stylesheet_link_tag "style" %>
+    <%= javascript_include_tag :defaults %>
+    <%= active_scaffold_includes %>
+  </head>
+  <body>
+    <h1>IlmoAdmin 2.0</h1>
 
-<%= "admin.html" %>
+    <%= yield %>
+
+    <hr/>
+    Page was created at <%= current_time %>
+
+  </body>
+</html>

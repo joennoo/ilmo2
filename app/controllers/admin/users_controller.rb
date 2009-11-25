@@ -1,7 +1,5 @@
 class Admin::UsersController < AdminController
 
-  def index
-    render :text => "adminin indeksi"
-  end
+  active_scaffold :users
 
 end

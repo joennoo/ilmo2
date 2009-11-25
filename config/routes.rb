@@ -49,12 +49,15 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "/sessions/logout", :controller => "sessions", :action => "destroy"
   map.resources :sessions
 
+  #map.admin_users "/admin/users", :controller => "admin/users", :action => "show_search"
+  #map.admin_users "/admin/users", :controller => "admin/users", :action => "update_table"
   map.namespace(:admin) do |admin|
     admin.resources :users
+    admin.resources :courses
   end
 
   map.root :controller => :courses, :action => :index
 
-  # map.connect ':controller/:action/:id'
-  # map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
 end
