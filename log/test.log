@@ -1,0 +1,207 @@
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 18:39:49', 'noora', 'salasana', NULL, '2009-11-26 18:39:49')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:04:34) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:06:06) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/courses]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:07:20) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ab') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'aaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 19:15:46', 'noora', 'salasana', NULL, '2009-11-26 19:15:46')[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-26 21:15:46) [GET]
+  Parameters: {"id"=>"12"}
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 1ms (View: 0, DB: 2) | 200 OK [http://test.host/courses/12]
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:15:46', NULL, '2009-11-26 19:15:46')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:15:46', NULL, '2009-11-26 19:15:46')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:15:46', NULL, '2009-11-26 19:15:46')[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:15:46) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 2) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:15:46) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ab') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'aaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 19:22:28', 'noora', 'salasana', NULL, '2009-11-26 19:22:28')[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-26 21:22:28) [GET]
+  Parameters: {"id"=>"12"}
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/courses/12]
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:22:28', NULL, '2009-11-26 19:22:28')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:22:28', NULL, '2009-11-26 19:22:28')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:22:28', NULL, '2009-11-26 19:22:28')[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:22:28) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:22:28) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/courses]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ab') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'aaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 19:44:57', 'noora', 'salasana', NULL, '2009-11-26 19:44:57')[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-26 21:44:57) [GET]
+  Parameters: {"id"=>"12"}
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 1ms (View: 0, DB: 2) | 200 OK [http://test.host/courses/12]
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:44:57', NULL, '2009-11-26 19:44:57')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:44:57', NULL, '2009-11-26 19:44:57')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:44:57', NULL, '2009-11-26 19:44:57')[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:44:57) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:44:57) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 1) | 200 OK [http://test.host/courses]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ab') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'aaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 19:50:07', 'noora', 'salasana', NULL, '2009-11-26 19:50:07')[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-26 21:50:07) [GET]
+  Parameters: {"id"=>"12"}
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 2ms (View: 1, DB: 5) | 200 OK [http://test.host/courses/12]
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:50:07', NULL, '2009-11-26 19:50:07')[0m
+  [4;36;1mCourse Create (0.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:50:07', NULL, '2009-11-26 19:50:07')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:50:07', NULL, '2009-11-26 19:50:07')[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:50:07) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:50:07) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/courses]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ab') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'aaaaaaaaaaaaaaaa') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'noora') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("studentid", "updated_at", "username", "password", "realname", "created_at") VALUES(NULL, '2009-11-26 19:51:34', 'noora', 'salasana', NULL, '2009-11-26 19:51:34')[0m
+
+
+Processing CoursesController#show (for 0.0.0.0 at 2009-11-26 21:51:34) [GET]
+  Parameters: {"id"=>"12"}
+Rendering template within layouts/application
+Rendering courses/show
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/courses/12]
+  [4;35;1mCourse Create (1.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:51:34', NULL, '2009-11-26 19:51:34')[0m
+  [4;36;1mCourse Create (1.0ms)[0m   [0;1mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:51:34', NULL, '2009-11-26 19:51:34')[0m
+  [4;35;1mCourse Create (0.0ms)[0m   [0mINSERT INTO "courses" ("name", "updated_at", "description", "created_at") VALUES('Rails and rSpec', '2009-11-26 19:51:34', NULL, '2009-11-26 19:51:34')[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:51:34) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://test.host/courses]
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM "courses" ORDER BY name ASC[0m
+
+
+Processing CoursesController#index (for 0.0.0.0 at 2009-11-26 21:51:34) [GET]
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/courses]
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM "courses" ORDER BY name ASC[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
