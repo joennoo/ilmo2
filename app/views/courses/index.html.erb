@@ -9,7 +9,7 @@
               (<%= link_to "Logout", "/sessions/logout", :method => :delete %>)
   <h2>Courses</h2>
   <ul>
-  <% Course.courses_in_order_by_name.each do |course| %>
+  <% @courses.each do |course| %>
     <li><%= link_to course.name,
                 :controller=> "courses",
                 :action=> "show",
