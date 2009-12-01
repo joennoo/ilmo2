@@ -54,6 +54,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace(:admin) do |admin|
     admin.resources :users
     admin.resources :courses
+    admin.resource :mailer, :controller => "mailer"
   end
 
   map.root :controller => :courses, :action => :index

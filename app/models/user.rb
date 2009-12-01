@@ -7,4 +7,14 @@ class User < ActiveRecord::Base
 
   attr_accessor :password_confirmation
 
+  named_scope :with_email, :conditions => "email IS NOT NULL"
+
+  after_create :update_newsfeed
+
+  private
+
+  def update_newsfeed
+    Newsfeed.user_registered(self)
+  end
+
 end

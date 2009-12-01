@@ -14755,3 +14755,653 @@ Completed in 289ms (View: 282, DB: 3) | 200 OK [http://localhost/admin/users]
   [4;36;1mSQL (97.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091114202141')[0m
   [4;35;1mSQL (134.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091118173934')[0m
   [4;36;1mSQL (99.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091120200251')[0m
+/!\ FAILSAFE /!\  Tue Dec 01 13:33:10 +0200 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on 'localhost' (10061)
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `real_connect'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    E:/Program Files/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 13:34:00) [GET]
+  [4;36;1mUser Columns (23.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 3133ms (View: 3068, DB: 24) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 14:37:18) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/admin/mailer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 14:37:20) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 33ms (View: 17, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 14:39:33) [GET]
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-01 14:41:31) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `courses` [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT `courses`.* FROM `courses` ORDER BY courses.`id` ASC LIMIT 0, 15[0m
+  [4;35;1mCourseInstance Load (13.0ms)[0m   [0mSELECT `course_instances`.* FROM `course_instances` WHERE (`course_instances`.course_id IN (1,2,3,4,5)) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (10.0ms)
+Rendered _list_column_headings (37.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (9.0ms)
+Rendered _list_record (233.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (12.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (11.0ms)
+Rendered _list (351.0ms)
+Completed in 572ms (View: 495, DB: 27) | 200 OK [http://localhost/admin/courses]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-01 14:41:46) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.* FROM `users` ORDER BY users.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (8.0ms)
+Rendered _list_column_headings (48.0ms)
+Rendered _messages (1.0ms)
+Rendered _list_actions (10.0ms)
+Rendered _list_record (25.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (12.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (12.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (11.0ms)
+Rendered _list (136.0ms)
+Completed in 292ms (View: 285, DB: 4) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 14:46:15) [GET]
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+ERROR: compiling _run_erb_app47views47admin47mailer47show46html46erb RAISED compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:6: syntax error, unexpected ';', expecting ')'
+...y, "Hi!", :rows => 10 ).to_s); @output_buffer.concat "<br/>\...
+                              ^
+Function body:           def _run_erb_app47views47admin47mailer47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>Send Mail</h2>\n"
+@output_buffer.concat "\n"
+ form_tag do ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  Subject: "; @output_buffer.concat(( text_field_tag :subject ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( text_area_tag(:body, "Hi!", :rows => 10 ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( submit_tag "Send" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:13:in `compile!'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:6: syntax error, unexpected ';', expecting ')'
+...y, "Hi!", :rows => 10 ).to_s); @output_buffer.concat "<br/>\...
+                              ^) on line #6 of app/views/admin/mailer/show.html.erb:
+3: <% form_tag do %>
+4: 
+5:   Subject: <%= text_field_tag :subject %><br/>
+6:   <%= text_area_tag(:body, "Hi!", :rows => 10 %><br/>
+7:   <%= submit_tag "Send" %>
+8: 
+9: <% end %>
+
+    app/views/admin/mailer/show.html.erb:13:in `compile!'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (153.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 14:46:44) [GET]
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+Completed in 18ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091112162227)
+Migrating to CreateUsers (20091114202141)
+Migrating to AddRealNameAndStudentIdToUsers (20091118173934)
+Migrating to CreateCourseInstances (20091120200251)
+Migrating to CreateExerciseGroups (20091122190948)
+Migrating to AddEmailToUsers (20091201125039)
+  [4;36;1mSQL (260.0ms)[0m   [0;1mALTER TABLE `users` ADD `email` varchar(255)[0m
+  [4;35;1mSQL (65.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091201125039')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `course_instances`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `course_instances`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `exercise_groups`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `exercise_groups`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'njoensuu' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `email` = 'noora.joensuu@cs.helsinki.fi', `updated_at` = '2009-12-01 12:55:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (11.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Sent mail to noora.joensuu@cs.helsinki.fi
+
+Date: Tue, 1 Dec 2009 15:17:15 +0200
+To: noora.joensuu@cs.helsinki.fi
+Subject: Testing
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei, testataan rails-kurssilta ^___^
+
+Moi njoensuu !
+
+test, test,..
+
+- admin
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 15:25:23) [GET]
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+Completed in 21ms (View: 21, DB: 1) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-01 15:26:21) [POST]
+  Parameters: {"commit"=>"Send", "body"=>"testing, testing...more testing", "authenticity_token"=>"7cR29xqvF3J2yPn3qiyvT0vu7KmHh1QJlgtVclpANTk=", "subject"=>"Kontrolleritesti"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+
+NoMethodError (undefined method `send_mail' for UserMailer:Class):
+  app/controllers/admin/mailer_controller.rb:11:in `create'
+  E:1:in `each'
+  E:1:in `__send__'
+  E:1:in `each'
+  app/controllers/admin/mailer_controller.rb:10:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-01 15:28:27) [GET]
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/admin/mailer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-01 15:28:49) [POST]
+  Parameters: {"commit"=>"Send", "body"=>"testing & testing", "authenticity_token"=>"7cR29xqvF3J2yPn3qiyvT0vu7KmHh1QJlgtVclpANTk=", "subject"=>"Kontrolleritesti"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Sent mail to noora.joensuu@cs.helsinki.fi
+
+Date: Tue, 1 Dec 2009 15:28:49 +0200
+To: noora.joensuu@cs.helsinki.fi
+Subject: Kontrolleritesti
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei, testataan rails-kurssilta ^___^
+
+Moi njoensuu !
+
+testing & testing
+
+- admin
+Completed in 1075ms (View: 2, DB: 4) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (68.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091112162227)
+Migrating to CreateUsers (20091114202141)
+Migrating to AddRealNameAndStudentIdToUsers (20091118173934)
+Migrating to CreateCourseInstances (20091120200251)
+Migrating to CreateExerciseGroups (20091122190948)
+Migrating to AddEmailToUsers (20091201125039)
+Migrating to CreateNewsfeeds (20091201144837)
+  [4;36;1mSQL (81.0ms)[0m   [0;1mCREATE TABLE `newsfeeds` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091201144837')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `course_instances`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `course_instances`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `exercise_groups`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `exercise_groups`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `newsfeeds`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `newsfeeds`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'testi5') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO `users` (`studentid`, `updated_at`, `username`, `password`, `realname`, `created_at`, `email`) VALUES(NULL, '2009-12-01 14:59:27', 'testi5', 'testi', NULL, '2009-12-01 14:59:27', NULL)[0m
+  [4;36;1mNewsfeed Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mNewsfeed Create (1.0ms)[0m   [0mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('User testi5 registered.', '2009-12-01 14:59:27', '2009-12-01 14:59:27')[0m
+  [4;36;1mSQL (34.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:03:35) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 59ms (View: 37, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-01 17:03:42) [POST]
+  Parameters: {"user"=>{"username"=>"testi", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"7cR29xqvF3J2yPn3qiyvT0vu7KmHh1QJlgtVclpANTk="}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 6) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:03:44) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` [0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 35ms (View: 10, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-01 17:03:51) [POST]
+  Parameters: {"user"=>{"username"=>"testi2", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"7cR29xqvF3J2yPn3qiyvT0vu7KmHh1QJlgtVclpANTk="}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi2' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 5) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:03:52) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 52ms (View: 18, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:07:17) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 150ms (View: 40, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'testi6') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO `users` (`studentid`, `updated_at`, `username`, `password`, `realname`, `created_at`, `email`) VALUES(NULL, '2009-12-01 15:09:13', 'testi6', 'testi', NULL, '2009-12-01 15:09:13', NULL)[0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mNewsfeed Create (0.0ms)[0m   [0mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('User testi6 registered.', '2009-12-01 15:09:13', '2009-12-01 15:09:13')[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:09:30) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 58ms (View: 28, DB: 11) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:20:39) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+
+NoMethodError (undefined method `feeds_in_order_by_time' for #<Class:0x5f29aa4>):
+  app/controllers/courses_controller.rb:7:in `index'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:21:02) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+
+NoMethodError (undefined method `feeds_in_order_by_time' for #<Class:0x5de7984>):
+  app/controllers/courses_controller.rb:7:in `index'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (128.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:21:03) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mNewsfeed Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+
+NoMethodError (undefined method `feeds_in_order_by_time' for #<Class:0x60538bc>):
+  app/controllers/courses_controller.rb:7:in `index'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-01 17:22:40) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 72ms (View: 41, DB: 13) | 200 OK [http://localhost/]

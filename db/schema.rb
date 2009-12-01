@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091122190948) do
+ActiveRecord::Schema.define(:version => 20091201144837) do
 
   create_table "course_instances", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(:version => 20091122190948) do
     t.datetime "updated_at"
   end
 
+  create_table "newsfeeds", :force => true do |t|
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "password"
@@ -39,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20091122190948) do
     t.datetime "updated_at"
     t.string   "realname"
     t.integer  "studentid",  :limit => 8
+    t.string   "email"
   end
 
 end

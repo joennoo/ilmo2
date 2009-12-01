@@ -5,5 +5,7 @@ class AddRealNameAndStudentIdToUsers < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :users, :realname
+    remove_column :users, :studentid
   end
 end
