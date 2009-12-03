@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
 
   def index
     @user = User.new
-    @newsfeed = Newsfeed.feeds_in_order_by_time
+    @newsfeed = Newsfeed.all
     @courses = Course.courses_in_order_by_name
   end
 

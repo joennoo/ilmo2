@@ -46,11 +46,11 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
+  map.resources :registrations
+
   map.logout "/sessions/logout", :controller => "sessions", :action => "destroy"
   map.resources :sessions
 
-  #map.admin_users "/admin/users", :controller => "admin/users", :action => "show_search"
-  #map.admin_users "/admin/users", :controller => "admin/users", :action => "update_table"
   map.namespace(:admin) do |admin|
     admin.resources :users
     admin.resources :courses

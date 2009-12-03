@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
 
   named_scope :with_email, :conditions => "email IS NOT NULL"
 
+  has_many :registrations
+  has_many :exercise_groups,
+            :through => :registrations
+
   after_create :update_newsfeed
 
   private

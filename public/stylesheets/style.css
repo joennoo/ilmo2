@@ -2,7 +2,7 @@ body {
     background-color:#f0f1f2
 }
 
-.account_created, .account_updated{
+.account_created, .account_updated, .registration_saved{
     color: green
 }
 

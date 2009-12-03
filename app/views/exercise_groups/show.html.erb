@@ -1,9 +1,31 @@
 <h2><%= @ex_group.course_instance.course.name %></h2>
 
-<h3><%= @ex_group.course_instance.name %></h3>
+<h3><%= @ex_group.course_instance.name %>, <%= @ex_group.name %></h3>
 
-<h4><%= @ex_group.name %></h4>
+<div class="registration_saved" >
+  <%= flash[:notice] %>
+</div>
 
 <%= link_to "Back",
     course_course_instance_url(@ex_group.course_instance.course,
                                @ex_group.course_instance) %><br/>
+
+<h4>Users in this exercise group</h4>
+<ul>
+  <% @ex_group.users.each do |u| %>
+  
+  <li><%= u.username %></li>
+  <% end %>
+</ul>
+
+<% #if not registered?(@user, @ex_group) %>
+  <%= link_to "Register to exercise group",
+              registrations_url(:user_id => @user, :exercise_group_id => @ex_group),
+              :method => :post %>
+<% #else %>
+  <%  #= link_to "Remove registration from exercise group",
+       #       @registration,
+        #      :method => :delete %>
+<% #end %>
+
+
