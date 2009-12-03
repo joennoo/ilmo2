@@ -20835,3 +20835,1016 @@ Migrating to CreateRoles (20091203134147)
   [4;36;1mUser Create (7.0ms)[0m   [0;1mINSERT INTO `users` (`studentid`, `updated_at`, `username`, `password`, `realname`, `created_at`, `email`) VALUES(NULL, '2009-12-03 14:01:01', 'admin', 'admin', NULL, '2009-12-03 14:01:01', NULL)[0m
   [4;35;1mNewsfeed Create (2.0ms)[0m   [0mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('User admin registered.', '2009-12-03 14:01:01', '2009-12-03 14:01:01')[0m
   [4;36;1mSQL (67.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+WARNING: Can't mass-assign these protected attributes: type
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.0ms)[0m   [0;1mINSERT INTO `roles` (`updated_at`, `type`, `user_id`, `created_at`) VALUES('2009-12-03 14:08:16', NULL, 15, '2009-12-03 14:08:16')[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` [0m
+  [4;35;1mRole Load (5.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Update (0.0ms)[0m   [0mUPDATE `roles` SET `type` = 'admin', `updated_at` = '2009-12-03 14:09:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (37.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRole Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'TESTI') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'TESTI') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` [0m
+  [4;36;1mRole Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCourses (20091112162227)
+Migrating to CreateUsers (20091114202141)
+Migrating to AddRealNameAndStudentIdToUsers (20091118173934)
+Migrating to CreateCourseInstances (20091120200251)
+Migrating to CreateExerciseGroups (20091122190948)
+Migrating to AddEmailToUsers (20091201125039)
+Migrating to CreateNewsfeeds (20091201144837)
+Migrating to CreateRegistrations (20091202154239)
+Migrating to ModifyRegistrations (20091202155745)
+Migrating to CreateRoles (20091203134147)
+Migrating to ModifyRoles (20091203141731)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW COLUMNS FROM `roles` LIKE 'type'[0m
+  [4;36;1mSQL (111.0ms)[0m   [0;1mALTER TABLE `roles` CHANGE `type` `role_type` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091203141731')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `course_instances`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `course_instances`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `exercise_groups`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `exercise_groups`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `newsfeeds`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `newsfeeds`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `registrations`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `registrations`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` [0m
+  [4;35;1mRole Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:25:57) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 289ms (View: 209, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:26:04) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 11) [0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 24ms (DB: 7) | 302 Found [http://localhost/admin/courses]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:26:06) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 68ms (View: 32, DB: 13) | 200 OK [http://localhost/]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 16:26:11) [DELETE]
+  Parameters: {"authenticity_token"=>"7cR29xqvF3J2yPn3qiyvT0vu7KmHh1QJlgtVclpANTk="}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 2) | 302 Found [http://localhost/sessions/logout]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:26:13) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 42ms (View: 10, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:26:18) [POST]
+  Parameters: {"user"=>{"username"=>"admin", "password"=>"admin"}, "commit"=>"OK", "authenticity_token"=>"JhbNEwFRbTR+K52pK2vXmx9QJ3LqDcu21uTjdofaivc="}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'admin' AND `users`.`password` = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 24ms (DB: 6) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:26:19) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 154ms (View: 30, DB: 17) | 200 OK [http://localhost/]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:26:32) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (3.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+NoMethodError (undefined method `value' for #<Role:0x5cfce84>):
+  app/controllers/application_controller.rb:31:in `role_required'
+  app/controllers/application_controller.rb:31:in `role_required'
+  app/controllers/application_controller.rb:26:in `admin_required'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:30:21) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mSELECT count(*) AS count_all FROM `courses` [0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT `courses`.* FROM `courses` ORDER BY courses.`id` ASC LIMIT 0, 15[0m
+  [4;35;1mCourseInstance Load (65.0ms)[0m   [0mSELECT `course_instances`.* FROM `course_instances` WHERE (`course_instances`.course_id IN (1,2,3,4,5,7)) [0m
+  [4;36;1mCourseInstance Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (13.0ms)
+Rendered _list_column_headings (49.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (13.0ms)
+Rendered _list_record (98.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (12.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (11.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list (258.0ms)
+Completed in 680ms (View: 349, DB: 131) | 200 OK [http://localhost/admin/courses]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:30:45) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mNewsfeed Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (4.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 184ms (View: 38, DB: 22) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:30:48) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 66ms (View: 33, DB: 11) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:30:59) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `courses` [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT `courses`.* FROM `courses` ORDER BY courses.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT `course_instances`.* FROM `course_instances` WHERE (`course_instances`.course_id IN (1,2,3,4,5,7)) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (7.0ms)
+Rendered _list_column_headings (39.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (9.0ms)
+Rendered _list_record (28.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (94.0ms)
+Rendered _list_record (101.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list (248.0ms)
+Completed in 347ms (View: 306, DB: 17) | 200 OK [http://localhost/admin/courses]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (1.0ms)[0m   [0;1mINSERT INTO `roles` (`updated_at`, `role_type`, `user_id`, `created_at`) VALUES('2009-12-03 14:32:44', 'student', 1, '2009-12-03 14:32:44')[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Load (8.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1) [0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:26) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 67ms (View: 33, DB: 11) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 16:33:28) [DELETE]
+  Parameters: {"authenticity_token"=>"JhbNEwFRbTR+K52pK2vXmx9QJ3LqDcu21uTjdofaivc="}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 1) | 302 Found [http://localhost/sessions/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:29) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 36ms (View: 10, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:33:36) [POST]
+  Parameters: {"user"=>{"username"=>"njoensuu", "password"=>"salasana"}, "commit"=>"OK", "authenticity_token"=>"lD/iyGJHy6FHsCiE4iOCAA7/eG5Hy//8piP0uVeTCF4="}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'njoensuu' AND `users`.`password` = 'salasana') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:37) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 156ms (View: 119, DB: 13) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:42) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1) [0m
+  [4;36;1mRole Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 31ms (DB: 14) | 302 Found [http://localhost/admin/courses]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:44) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 69ms (View: 33, DB: 13) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-03 16:33:53) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mRole Load (2.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 11ms (DB: 10) | 302 Found [http://localhost/admin/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:33:55) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mNewsfeed Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 148ms (View: 111, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 16:34:04) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1) [0m
+  [4;36;1mRole Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_required] rendered_or_redirected.
+Completed in 39ms (DB: 7) | 302 Found [http://localhost/admin/mailer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:34:06) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 70ms (View: 35, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 16:34:08) [DELETE]
+  Parameters: {"authenticity_token"=>"lD/iyGJHy6FHsCiE4iOCAA7/eG5Hy//8piP0uVeTCF4="}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/sessions/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:34:10) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 36ms (View: 9, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:34:16) [POST]
+  Parameters: {"user"=>{"username"=>"admin", "password"=>"admin"}, "commit"=>"OK", "authenticity_token"=>"p7PbUzJotA1tYdv7jZRTPWRBOXlpW2L34ta/f/yzuGg="}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'admin' AND `users`.`password` = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 3) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:34:17) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 154ms (View: 32, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+
+
+Processing Admin::CoursesController#index (for 127.0.0.1 at 2009-12-03 16:34:35) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `courses` [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT `courses`.* FROM `courses` ORDER BY courses.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT `course_instances`.* FROM `course_instances` WHERE (`course_instances`.course_id IN (1,2,3,4,5,7)) [0m
+  [4;35;1mCourseInstance Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (7.0ms)
+Rendered _list_column_headings (38.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (8.0ms)
+Rendered _list_record (27.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (14.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (13.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (12.0ms)
+Rendered _list (159.0ms)
+Completed in 264ms (View: 217, DB: 19) | 200 OK [http://localhost/admin/courses]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2009-12-03 16:34:45) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.* FROM `users` ORDER BY users.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mRegistration Load (2.0ms)[0m   [0;1mSELECT `registrations`.* FROM `registrations` WHERE (`registrations`.user_id IN (1,2,10,11,12,13,14,15)) [0m
+  [4;35;1mRegistration Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mExerciseGroup Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT `roles`.* FROM `roles` WHERE (`roles`.user_id IN (1,2,10,11,12,13,14,15)) [0m
+Rendering template within layouts/admin
+Rendering list
+Rendered _list_header (9.0ms)
+Rendered _list_column_headings (74.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_actions (11.0ms)
+Rendered _list_record (34.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (17.0ms)
+Rendered _list_actions (7.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list_actions (6.0ms)
+Rendered _list_record (18.0ms)
+Rendered _list (263.0ms)
+Completed in 365ms (View: 324, DB: 16) | 200 OK [http://localhost/admin/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+Processing Admin::UsersController#nested (for 127.0.0.1 at 2009-12-03 16:35:21) [GET]
+  Parameters: {"associations"=>"registrations", "adapter"=>"_list_inline_adapter", "id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mRegistration Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `registrations`[0m
+Rendered _nested (52.0ms)
+Rendered _messages (2.0ms)
+Rendered _list_inline_adapter (14.0ms)
+Completed in 109ms (View: 20, DB: 0) | 200 OK [http://localhost/admin/users/nested/1?_method=get&associations=registrations&adapter=_list_inline_adapter]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:35:40) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (0.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 67ms (View: 34, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 16:35:42) [DELETE]
+  Parameters: {"authenticity_token"=>"p7PbUzJotA1tYdv7jZRTPWRBOXlpW2L34ta/f/yzuGg="}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 1) | 302 Found [http://localhost/sessions/logout]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:35:43) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 36ms (View: 9, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:35:55) [POST]
+  Parameters: {"user"=>{"username"=>"mattimei", "password"=>""}, "commit"=>"OK", "authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4="}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'mattimei' AND `users`.`password` = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 4) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:35:56) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 38ms (View: 9, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:36:06) [POST]
+  Parameters: {"user"=>{"username"=>"mattimei", "password"=>"matti"}, "commit"=>"OK", "authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4="}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'mattimei' AND `users`.`password` = 'matti') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 4) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:36:08) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mNewsfeed Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 68ms (View: 33, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-03 16:36:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 46ms (View: 29, DB: 9) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 16:36:18) [GET]
+  Parameters: {"id"=>"4", "course_id"=>"1"}
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.course_instance_id = 4) [0m
+  [4;36;1mExerciseGroup Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 71ms (View: 49, DB: 10) | 200 OK [http://localhost/courses/1/course_instances/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:20) [GET]
+  Parameters: {"course_instance_id"=>"4", "id"=>"16", "course_id"=>"1"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 16) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=16) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 16)) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 16) [0m
+Completed in 105ms (View: 56, DB: 17) | 200 OK [http://localhost/courses/1/course_instances/4/exercise_groups/16]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-12-03 16:36:22) [POST]
+  Parameters: {"authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4=", "exercise_group_id"=>"16", "user_id"=>"14"}
+  [4;36;1mRegistration Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `registrations`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRegistration Create (0.0ms)[0m   [0;1mINSERT INTO `registrations` (`updated_at`, `exercise_group_id`, `user_id`, `created_at`) VALUES('2009-12-03 14:36:22', 16, 14, '2009-12-03 14:36:22')[0m
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 16) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('mattimei registered to exercise_group Ke 16-18 of course Laskennan mallit, Syksy 2010.', '2009-12-03 14:36:22', '2009-12-03 14:36:22')[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 16) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Redirected to http://localhost:3000/courses/1/course_instances/4/exercise_groups/16
+Completed in 147ms (DB: 69) | 302 Found [http://localhost/registrations?exercise_group_id=16&user_id=14]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:24) [GET]
+  Parameters: {"course_instance_id"=>"4", "id"=>"16", "course_id"=>"1"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mExerciseGroup Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 16) [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=16) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 16)) [0m
+  [4;36;1mRegistration Load (0.0ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 16) [0m
+  [4;35;1mRegistration Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+Completed in 93ms (View: 33, DB: 30) | 200 OK [http://localhost/courses/1/course_instances/4/exercise_groups/16]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 16:36:30) [GET]
+  Parameters: {"id"=>"4", "course_id"=>"1"}
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.course_instance_id = 4) [0m
+  [4;36;1mExerciseGroup Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 129ms (View: 29, DB: 11) | 200 OK [http://localhost/courses/1/course_instances/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-03 16:36:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 36ms (View: 19, DB: 10) | 200 OK [http://localhost/courses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 16:36:40) [GET]
+  Parameters: {"id"=>"3", "course_id"=>"1"}
+  [4;35;1mCourseInstance Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.course_instance_id = 3) [0m
+  [4;36;1mExerciseGroup Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 52ms (View: 30, DB: 14) | 200 OK [http://localhost/courses/1/course_instances/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:44) [GET]
+  Parameters: {"course_instance_id"=>"3", "id"=>"2", "course_id"=>"1"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 2) [0m
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=2) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 2)) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 2) [0m
+Completed in 80ms (View: 32, DB: 19) | 200 OK [http://localhost/courses/1/course_instances/3/exercise_groups/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-12-03 16:36:46) [POST]
+  Parameters: {"authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4=", "exercise_group_id"=>"2", "user_id"=>"14"}
+  [4;36;1mRegistration Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `registrations`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mRegistration Create (0.0ms)[0m   [0;1mINSERT INTO `registrations` (`updated_at`, `exercise_group_id`, `user_id`, `created_at`) VALUES('2009-12-03 14:36:46', 2, 14, '2009-12-03 14:36:46')[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 2) [0m
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (2.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mNewsfeed Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mNewsfeed Create (0.0ms)[0m   [0;1mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('mattimei registered to exercise_group Ke 10-12 of course Laskennan mallit, Syksy 2009.', '2009-12-03 14:36:46', '2009-12-03 14:36:46')[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Redirected to http://localhost:3000/courses/1/course_instances/3/exercise_groups/2
+Completed in 216ms (DB: 61) | 302 Found [http://localhost/registrations?exercise_group_id=2&user_id=14]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:48) [GET]
+  Parameters: {"course_instance_id"=>"3", "id"=>"2", "course_id"=>"1"}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mExerciseGroup Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 2) [0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=2) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 2)) [0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 2) [0m
+  [4;35;1mRegistration Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+Completed in 82ms (View: 28, DB: 22) | 200 OK [http://localhost/courses/1/course_instances/3/exercise_groups/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 16:36:50) [GET]
+  Parameters: {"id"=>"3", "course_id"=>"1"}
+  [4;35;1mCourseInstance Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;35;1mCourse Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (2.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.course_instance_id = 3) [0m
+  [4;36;1mExerciseGroup Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 57ms (View: 32, DB: 15) | 200 OK [http://localhost/courses/1/course_instances/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:52) [GET]
+  Parameters: {"course_instance_id"=>"3", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (2.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 1)) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 1) [0m
+  [4;36;1mRegistration Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `registrations`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Completed in 91ms (View: 37, DB: 25) | 200 OK [http://localhost/courses/1/course_instances/3/exercise_groups/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-12-03 16:36:56) [POST]
+  Parameters: {"authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4=", "exercise_group_id"=>"1", "user_id"=>"14"}
+  [4;35;1mRegistration Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRegistration Create (0.0ms)[0m   [0mINSERT INTO `registrations` (`updated_at`, `exercise_group_id`, `user_id`, `created_at`) VALUES('2009-12-03 14:36:56', 1, 14, '2009-12-03 14:36:56')[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mExerciseGroup Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mNewsfeed Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mNewsfeed Create (2.0ms)[0m   [0mINSERT INTO `newsfeeds` (`message`, `updated_at`, `created_at`) VALUES('mattimei registered to exercise_group Ti 14-16 of course Laskennan mallit, Syksy 2009.', '2009-12-03 14:36:56', '2009-12-03 14:36:56')[0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Load (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Redirected to http://localhost:3000/courses/1/course_instances/3/exercise_groups/1
+Completed in 243ms (DB: 83) | 302 Found [http://localhost/registrations?exercise_group_id=1&user_id=14]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExerciseGroupsController#show (for 127.0.0.1 at 2009-12-03 16:36:57) [GET]
+  Parameters: {"course_instance_id"=>"3", "id"=>"1", "course_id"=>"1"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mExerciseGroup Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (user_id=14 AND exercise_group_id=1) [0m
+Rendering template within layouts/application
+Rendering exercise_groups/show
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (0.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `registrations` ON `users`.id = `registrations`.user_id WHERE ((`registrations`.exercise_group_id = 1)) [0m
+  [4;35;1mRegistration Load (0.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (`registrations`.exercise_group_id = 1) [0m
+  [4;36;1mRegistration Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `registrations`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+Completed in 87ms (View: 35, DB: 18) | 200 OK [http://localhost/courses/1/course_instances/3/exercise_groups/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CourseInstancesController#show (for 127.0.0.1 at 2009-12-03 16:37:01) [GET]
+  Parameters: {"id"=>"3", "course_id"=>"1"}
+  [4;36;1mCourseInstance Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `course_instances`[0m
+  [4;35;1mCourseInstance Load (1.0ms)[0m   [0mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering course_instances/show
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (2.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.course_instance_id = 3) [0m
+  [4;35;1mExerciseGroup Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 57ms (View: 31, DB: 16) | 200 OK [http://localhost/courses/1/course_instances/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2009-12-03 16:37:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+  [4;36;1mCourseInstance Load (1.0ms)[0m   [0;1mSELECT * FROM `course_instances` WHERE (`course_instances`.course_id = 1) [0m
+  [4;35;1mCourseInstance Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `course_instances`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Completed in 39ms (View: 20, DB: 10) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:37:05) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mNewsfeed Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 150ms (View: 113, DB: 15) | 200 OK [http://localhost/]

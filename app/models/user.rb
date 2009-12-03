@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :registrations
   has_many :exercise_groups,
             :through => :registrations
-  has_many :roles
+  has_many :roles, :dependent => :destroy
 
   before_create :username_to_downcase
   after_create :update_newsfeed

@@ -4,5 +4,6 @@ class ModifyRegistrations < ActiveRecord::Migration
   end
 
   def self.down
+    rename_column(:registrations, :exercise_group_id, :exergise_group_id)
   end
 end
