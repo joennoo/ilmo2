@@ -1,9 +1,10 @@
 <h2>Send Mail</h2>
 
 <% form_tag do %>
+  <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+    :name, {:prompt=> "Select an exercise group:"})  %><br/>
 
   Subject: <%= text_field_tag :subject %><br/>
   <%= text_area_tag :body, nil, :rows => 10 %><br/>
   <%= submit_tag "Send" %>
-
 <% end %>

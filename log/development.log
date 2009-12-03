@@ -21848,3 +21848,1259 @@ Rendering courses/index
   [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
   [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
 Completed in 150ms (View: 113, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 16:39:44) [DELETE]
+  Parameters: {"authenticity_token"=>"jUg9GyWOH8qa7eITX4e1OnyrHaDLxiA/38xfbLHL/Z4="}
+Redirected to http://localhost:3000/
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/sessions/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:39:47) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 102ms (View: 21, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (5.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 16:39:55) [POST]
+  Parameters: {"user"=>{"username"=>"testi2", "password"=>"testi"}, "commit"=>"OK", "authenticity_token"=>"d4d7yjbUyPJGzcoNgm9QNu9XNfEqmoHnIK69WaSHLNQ="}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'testi2' AND `users`.`password` = 'testi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 11) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 16:39:56) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (1.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mNewsfeed Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 70ms (View: 33, DB: 13) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-03 19:14:02) [DELETE]
+  Parameters: {"authenticity_token"=>"d4d7yjbUyPJGzcoNgm9QNu9XNfEqmoHnIK69WaSHLNQ="}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/sessions/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 19:14:03) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+Completed in 35ms (View: 9, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (14.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-03 19:14:08) [POST]
+  Parameters: {"user"=>{"username"=>"admin", "password"=>"admin"}, "commit"=>"OK", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A="}
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'admin' AND `users`.`password` = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 18) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 19:14:09) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (0.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (0.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 70ms (View: 35, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:14:14) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mExerciseGroup Load (0.0ms)[0m   [0mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;36;1mExerciseGroup Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 78ms (View: 36, DB: 13) | 200 OK [http://localhost/admin/mailer]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:22:25) [GET]
+  [4;35;1mUser Columns (11.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     @whole_names, {:prompt=> true}) %>>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:23:18) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (4.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true}) %>>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 19:23:29) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mNewsfeed Load (4.0ms)[0m   [0;1mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mNewsfeed Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;36;1mCourse Load (1.0ms)[0m   [0;1mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;35;1mCourse Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 88ms (View: 42, DB: 22) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:23:32) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true}) %>>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:24:54) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true})  %>>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:25:57) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true})  %>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:25:58) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3: <%= collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true})  %>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:3
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:26:52) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (2.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 94ms (View: 37, DB: 19) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (23.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:27:48) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (4.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (2.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+  [4;35;1mExerciseGroup Columns (14.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+
+NoMethodError (undefined method `course_instance' for #<Array:0x5d894d8>):
+  app/controllers/admin/mailer_controller.rb:5:in `show'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:38:01) [GET]
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+Completed in 63ms (View: 20, DB: 7) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mExerciseGroup Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;35;1mExerciseGroup Load (2.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 3) [0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 1) [0m
+  [4;36;1mRegistration Load (2.0ms)[0m   [0;1mSELECT * FROM `registrations` [0m
+  [4;35;1mRegistration Columns (18.0ms)[0m   [0mSHOW FIELDS FROM `registrations`[0m
+  [4;36;1mRegistration Load (1.0ms)[0m   [0;1mSELECT * FROM `registrations` WHERE (exercise_group_id = 1) [0m
+  [4;35;1mRegistration Load (1.0ms)[0m   [0mSELECT * FROM `registrations` WHERE (exercise_group_id = 1) [0m
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:57:08) [GET]
+  [4;35;1mUser Columns (19.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (2.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+ERROR: compiling _run_erb_app47views47admin47mailer47show46html46erb RAISED compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^
+Function body:           def _run_erb_app47views47admin47mailer47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>Send Mail</h2>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " ";  = collection_select(:exercise_group, :id, @ex_groups, :id,
+    :name, {:prompt=> "Select an exercise group:"})  ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ form_tag do ; @output_buffer.concat "\n"
+@output_buffer.concat "  Subject: "; @output_buffer.concat(( text_field_tag :subject ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( text_area_tag :body, nil, :rows => 10 ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( submit_tag "Send" ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:14:in `compile!'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3:  <% = collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> "Select an exercise group:"})  %>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:14:in `compile!'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:57:49) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+ERROR: compiling _run_erb_app47views47admin47mailer47show46html46erb RAISED compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^
+Function body:           def _run_erb_app47views47admin47mailer47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>Send Mail</h2>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " ";  = collection_select(:exercise_group, :id, @ex_groups, :id,
+    :name, {:prompt=> true})  ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ form_tag do ; @output_buffer.concat "\n"
+@output_buffer.concat "  Subject: "; @output_buffer.concat(( text_field_tag :subject ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( text_area_tag :body, nil, :rows => 10 ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( submit_tag "Send" ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:14:in `compile!'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3:  <% = collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true})  %>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:14:in `compile!'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:57:54) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+ERROR: compiling _run_erb_app47views47admin47mailer47show46html46erb RAISED compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^
+Function body:           def _run_erb_app47views47admin47mailer47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>Send Mail</h2>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " ";  = collection_select(:exercise_group, :id, @ex_groups, :id,
+    :name, {:prompt=> true})  ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ form_tag do ; @output_buffer.concat "\n"
+@output_buffer.concat "  Subject: "; @output_buffer.concat(( text_field_tag :subject ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( text_area_tag :body, nil, :rows => 10 ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( submit_tag "Send" ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:14:in `compile!'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_view_rendering.rb:61:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_without_active_scaffold'
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/vendor/plugins/active_scaffold/lib/extensions/action_controller_rendering.rb:13:in `render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+E:/Program Files/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+E:/Program Files/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/Yliopisto/2009 - 2010 Jakso 2/Kettera web-kehitys ja Ruby on Rails/github_ilmo2/app/views/admin/mailer/show.html.erb:3: syntax error, unexpected '=', expecting kEND
+@output_buffer.concat " ";  = collection_select(:exercise_g...
+                             ^) on line #3 of app/views/admin/mailer/show.html.erb:
+1: <h2>Send Mail</h2>
+2: 
+3:  <% = collection_select(:exercise_group, :id, @ex_groups, :id,
+4:     :name, {:prompt=> true})  %>
+5: 
+6: <% form_tag do %>
+
+    app/views/admin/mailer/show.html.erb:14:in `compile!'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:58:15) [GET]
+  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 217ms (View: 147, DB: 25) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:58:29) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 144ms (View: 29, DB: 26) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 19:59:06) [POST]
+  Parameters: {"commit"=>"Send", "body"=>"plaa, ploo", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testausta"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+ActiveRecord::RecordNotFound (Couldn't find ExerciseGroup without an ID):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 19:59:53) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 98ms (View: 27, DB: 15) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 20:00:13) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 84ms (View: 34, DB: 17) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:00:38) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa, plaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testausta"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+ActiveRecord::RecordNotFound (Couldn't find ExerciseGroup without an ID):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:03:14) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa, plaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testausta"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+ArgumentError (Unknown key(s): id):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 20:07:48) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 60ms (View: 15, DB: 15) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 20:07:51) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;35;1mExerciseGroup Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 61ms (View: 17, DB: 14) | 200 OK [http://localhost/admin/mailer]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2009-12-03 20:08:06) [GET]
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mNewsfeed Load (1.0ms)[0m   [0mSELECT * FROM `newsfeeds` ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mNewsfeed Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `newsfeeds`[0m
+  [4;35;1mCourse Load (1.0ms)[0m   [0mSELECT * FROM `courses` ORDER BY name ASC[0m
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Completed in 176ms (View: 47, DB: 14) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:08:24) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+NoMethodError (undefined method `[]' for :conditions:Symbol):
+  app/controllers/admin/mailer_controller.rb:11:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:10:20) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+NoMethodError (undefined method `[]' for :conditions:Symbol):
+  app/controllers/admin/mailer_controller.rb:11:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:10:54) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ArgumentError (Unknown key(s): id):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:11:20) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ActiveRecord::RecordNotFound (Couldn't find ExerciseGroup without an ID):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:11:43) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mExerciseGroup Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `exercise_groups`[0m
+  [4;36;1mExerciseGroup Load (0.0ms)[0m   [0;1mSELECT * FROM `exercise_groups` WHERE (`exercise_groups`.`id` = 49568910) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find ExerciseGroup with ID=49568910):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:12:03) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (4.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+ArgumentError (Unknown key(s): id):
+  app/controllers/admin/mailer_controller.rb:9:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:15:56) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (3.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+
+NoMethodError (undefined method `send_mail' for #<UserMailer:0x5b4c2c4>):
+  app/controllers/admin/mailer_controller.rb:17:in `create'
+  E:1:in `each'
+  E:1:in `__send__'
+  E:1:in `each'
+  app/controllers/admin/mailer_controller.rb:16:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:16:02) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaa plaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testing"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;35;1mRole Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+
+NoMethodError (undefined method `send_mail' for #<UserMailer:0x5cc38c8>):
+  app/controllers/admin/mailer_controller.rb:17:in `create'
+  E:1:in `each'
+  E:1:in `__send__'
+  E:1:in `each'
+  app/controllers/admin/mailer_controller.rb:16:in `create'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  E:/Program Files/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (218.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#show (for 127.0.0.1 at 2009-12-03 20:16:20) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mExerciseGroup Load (1.0ms)[0m   [0mSELECT * FROM `exercise_groups` [0m
+Rendering template within layouts/admin
+Rendering admin/mailer/show
+  [4;36;1mExerciseGroup Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `exercise_groups`[0m
+Completed in 80ms (View: 17, DB: 22) | 200 OK [http://localhost/admin/mailer]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::MailerController#create (for 127.0.0.1 at 2009-12-03 20:16:51) [POST]
+  Parameters: {"commit"=>"Send", "exercise_group"=>{"id"=>"1"}, "body"=>"plaaaaaaa", "authenticity_token"=>"nFTof2kjeJZtQClJiC5HOL+LNMknLhHNBDTLaBD2i/A=", "subject"=>"testaus"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 15) [0m
+  [4;36;1mRole Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (email IS NOT NULL) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Sent mail to noora.joensuu@cs.helsinki.fi
+
+Date: Thu, 3 Dec 2009 20:16:51 +0200
+To: noora.joensuu@cs.helsinki.fi
+Subject: testaus
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hei, testataan rails-kurssilta ^___^
+
+Moi njoensuu !
+
+plaaaaaaa
+
+- admin
+Completed in 1125ms (View: 2, DB: 21) | 200 OK [http://localhost/admin/mailer]
