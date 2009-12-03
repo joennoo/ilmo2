@@ -6,6 +6,11 @@ class CoursesController < ApplicationController
     @user = User.new
     @newsfeed = Newsfeed.all
     @courses = Course.courses_in_order_by_name
+
+    respond_to do |format|
+      format.html
+      format.rss
+    end
   end
 
   def show

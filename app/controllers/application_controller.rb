@@ -22,4 +22,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin_required
+    role_required 'admin'
+  end
+
+  def role_required(given_type)
+    user = User.find(session[:user_id])
+    user.roles.each { |role| return true if role.value == given_type }
+    flash[:error] = t 'Role is missing', :role => given_type
+    redirect_to root_url
+  end
+  
 end

@@ -12,10 +12,16 @@ class User < ActiveRecord::Base
   has_many :registrations
   has_many :exercise_groups,
             :through => :registrations
+  has_many :roles
 
+  before_create :username_to_downcase
   after_create :update_newsfeed
 
   private
+
+  def username_to_downcase
+    self.username.downcase!
+  end
 
   def update_newsfeed
     Newsfeed.user_registered(self)
