@@ -6,6 +6,20 @@
   <body>
     <h1>Ilmo 2.0</h1>
 
+    <% if logged_in? %>
+      <p>
+         Welcome, <%= link_to current_user.username, edit_user_url(current_user)  %>!
+              (<%= link_to "Logout", "/sessions/logout", :method => :delete %>)
+      </p>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <p style="color: green"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p style="color: red"><%= flash[:error] %></p>
+    <% end %>
+
     <%= yield %>
 
     <hr/>

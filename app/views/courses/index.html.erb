@@ -5,16 +5,17 @@
     <%= flash[:notice] %>
   </div>
 
-  Welcome, <%= link_to current_user.username, edit_user_url(current_user)  %>!
-              (<%= link_to "Logout", "/sessions/logout", :method => :delete %>)
+  <hr/>
+
   <h2>Newsfeed</h2>
-  <% @newsfeed.each do |item| %>
-    <%= item.message %><br/>
-    <%= time_ago_in_words (item.created_at) %> ago
-    <hr>
+  <% @latest_newsfeed.each do |item| %>
+    <p><%= item.message %><br/>
+    <%= time_ago_in_words (item.created_at) %> ago</p>
   <% end %>
 
- <h2>Courses</h2>
+  <hr/>
+
+  <h2>Courses</h2>
   <ul>
   <% @courses.each do |course| %>
     <li><%= link_to course.name,

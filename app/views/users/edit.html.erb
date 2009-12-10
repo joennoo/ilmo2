@@ -20,8 +20,23 @@
 
 <% end %>
 
+<h2>User's course registrations</h2>
+<% if @user.registrations.any? %>
+  <ul>
+    <% @user.registrations.each do |r| %>
+    <li>
+      <%= r.exercise_group.name %>
+    </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No registrations</p>
+<% end %>
+
+
 <%= link_to 'Delete account', @user,
         :confirm => 'Are you sure? This will remove your account permanently.',
         :method => :delete %>
+
 
 
