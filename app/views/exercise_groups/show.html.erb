@@ -25,8 +25,18 @@
       <%= u.username %>
       <% if u == current_user %>
         <%= link_to "unregister", 
-            registrations_path(:ex_group_id=>@ex_group.id),
+            registration_path(:ex_group_id=>@ex_group.id),
             :method=>:delete %>
+      <% else %>
+        <% if not user_is_friend?(u) %>
+          <%= link_to "mark as friend",
+              friendships_path(:friend_id=>u.id),
+              :method=>:post %>
+        <% else %>
+          Friend! <%= link_to "unmark as friend",
+              friendship_path(:friend_id=>u.id),
+              :method=>:delete %>
+        <% end %>
       <% end %>
     </li>
     <% end %>

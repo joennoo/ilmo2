@@ -16,14 +16,31 @@
   <hr/>
 
   <h2>Courses</h2>
-  <ul>
-  <% @courses.each do |course| %>
-    <li><%= link_to course.name,
-                :controller=> "courses",
-                :action=> "show",
-                :id => course.id %>
-    </li>
+  <% @categories.each do |category| %>
+    <%= category.name %>
+    <ul>
+      <% category.courses.each do |course| %>
+      <li><%= link_to course.name,
+                  :controller=> "courses",
+                  :action=> "show",
+                  :id => course.id %>
+      </li>
+      <% end %>
+    </ul>
   <% end %>
+
+  Uncategorized
+  <ul>
+    <% @courses.each do |course| %>
+      <% if course.category.nil? %>
+      <li>
+        <%= link_to course.name,
+                    :controller=> "courses",
+                    :action=> "show",
+                    :id => course.id %>
+      </li>
+      <% end %>
+    <% end %>
   </ul>
 
 <% else %>

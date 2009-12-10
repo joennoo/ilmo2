@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
     @user = User.new
     @latest_newsfeed = Newsfeed.latest
     @courses = Course.courses_in_order_by_name
+    @categories = Category.all
 
     respond_to do |format|
       format.html

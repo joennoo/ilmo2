@@ -40,6 +40,7 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.resources :users
   map.resources :registrations
+  map.resources :friendships
 
   map.resources :courses do |course|
     course.resources :course_instances do |course_ins|

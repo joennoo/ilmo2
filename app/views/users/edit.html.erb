@@ -25,12 +25,33 @@
   <ul>
     <% @user.registrations.each do |r| %>
     <li>
-      <%= r.exercise_group.name %>
+      <%= r.exercise_group.course_instance.course.name %>,
+      <%= r.exercise_group.course_instance.name %>,
+      <%= r.exercise_group.name %>,
+      <%= link_to "unregister",
+        registration_path(:ex_group_id=>r.exercise_group.id),
+          :method=>:delete %>
     </li>
     <% end %>
   </ul>
 <% else %>
   <p>No registrations</p>
+<% end %>
+
+<h2>User's friends</h2>
+<% if @user.friendships.any? %>
+  <ul>
+    <% @user.friendships.each do |f| %>
+    <li>
+      <%= f.user.username %>
+      <%= link_to "unmark as friend",
+              friendship_path(:friend_id=>f.user.id),
+              :method=>:delete %>
+    </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No friends</p>
 <% end %>
 
 
